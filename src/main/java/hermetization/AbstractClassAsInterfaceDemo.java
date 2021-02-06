@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class AbstractClassAsInterfaceDemo {
     public static void main(String[] args) {
-        Bank bank = new GringotBank();
+        Bank bank = new SuperHackerBank();
         Random random = new Random();
         while(true){
             //symulujemy wplaty
@@ -16,6 +16,7 @@ public class AbstractClassAsInterfaceDemo {
                 break;
             }
         }
+        System.out.println("Stan konta: " +bank.balance());
         System.out.println(bank.debit(200_000));
         System.out.println("Stan konta: " + bank.balance());
     }

@@ -1,5 +1,7 @@
 package hermetization;
-
+//Aby nie można było podmienić w miejsce GrigotBank klasy wyprowadzonej z niej
+//należy dodać final przed klasą
+//final public class GringotBank extends Bank{
 public class GringotBank extends Bank{
     private int balance;
     @Override
