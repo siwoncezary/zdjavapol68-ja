@@ -32,6 +32,9 @@ package homework.task2;
  *  gdzie XXX to jedna z przyczyn (lub pierwsza wykryta przyczyna): brak treści, brak lub niepoprawny adres, brak lub niepoprawny temat, brak lub niepoprawny numeru telefonu.
  */
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Wersja dla wymiataczy (trudne)
  * Składowe takie jak content, emailAddress, phoneNumber, subject mogą też mieć swoją klasę bazową abstrakcyjną np. MessageComponent, która może mieć metody abstarkcyjne:
@@ -71,5 +74,17 @@ public class Task02 {
          * Mail nie może zostać wysłany.
          * Mail nie może zostać wysłany.
           */
+        System.out.println(send());
+    }
+    public static String send() {
+        String emailAddress = "aaaoppl";
+        String subject = "aaa";
+        if (emailAddress == null) return "Mail nie może zostać wysłany.";
+        Pattern addres = Pattern.compile(".*\\s+([0-9a-zA-Z][\\dA-z-_.]+@([A-z\\d][A-z\\d-]+\\.){1,6}[A-z]{2,6}).*");
+        Matcher givenAddres = addres.matcher(emailAddress);
+        boolean aprovalOfAddres = givenAddres.matches();
+        if (aprovalOfAddres) return "Mail/SMS o treści " + subject + " został wysłany na adres " + emailAddress;
+        else
+            return "Mail nie może zostać wysłany.";
     }
 }
