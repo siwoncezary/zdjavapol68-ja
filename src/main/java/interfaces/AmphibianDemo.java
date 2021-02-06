@@ -6,5 +6,6 @@ public class AmphibianDemo {
         Movable tank = new Pt76();
         swimmingTank.travel(100);
         Swimmable boat = new Pt76();
+        boat.start();
     }
 }
