@@ -32,7 +32,7 @@ public class GasCar {
      * Przykład 2
      * wywołano metodę refuel(-10) i zwrócona wartość wynosi 0, gdyż nie można dolać ujemnej wartości paliwa
      * Przykład 3
-     * wywołano metodę refuel(5) i zwrócona wartość wynosi 5, gdyż cała porcja zmieściła się w abku
+     * wywołano metodę refuel(5) i zwrócona wartość wynosi 5, gdyż cała porcja zmieściła się w baku
      */
     public double refuel(double fuel){
         return 0;
