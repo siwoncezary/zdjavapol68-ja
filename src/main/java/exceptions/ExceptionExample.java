@@ -1,5 +1,7 @@
 package exceptions;
 
+import java.time.LocalDate;
+
 public class ExceptionExample {
 
     public static int avg(int ...arg){
@@ -16,5 +18,6 @@ public class ExceptionExample {
         } catch (ArithmeticException e){
             System.out.println("Nie dziel przez zero, lista wartości pusta!!");
         }
+        LocalDate date = LocalDate.of(2000,13,34);
     }
 }
