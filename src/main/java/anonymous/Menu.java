@@ -16,7 +16,7 @@ public class Menu {
     public void process(int number){
         for(MenuItem item: menuItems){
             if (item.getNumber() == number){
-                System.out.println("Wybrano polecenie: " + item.label);
+                item.process();
             }
         }
     }

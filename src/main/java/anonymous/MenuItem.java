@@ -3,6 +3,7 @@ package anonymous;
 public class MenuItem {
     final String label;
     final int number;
+    Callback callback;
 
     public MenuItem(String label, int number) {
         this.label = label;
@@ -15,5 +16,15 @@ public class MenuItem {
 
     public int getNumber() {
         return number;
+    }
+
+    public void setCallback(Callback callback) {
+        this.callback = callback;
+    }
+
+    public void process(){
+        if (callback != null){
+            callback.action();
+        }
     }
 }
