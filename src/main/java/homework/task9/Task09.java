@@ -2,8 +2,8 @@ package homework.task9;
 
 /**
  * Klasa GameBoard opisuje planszę do gry w kołko i krzyżyk.
- * W jej konstruktorze tworzonę są dwa obiekty klasy PlayerMark,
- * oba utworzone obiekty sa zwracane przez metodę getMarks()
+ * W jej konstruktorze tworzone są dwa obiekty klasy PlayerMark,
+ * oba obiekty sa zwracane przez metodę getMarks()
  * a metoda markAt() służy do stawiania znaku danego gracza na planszy
  *
  * Program Task09 ilustruje, że niestety można zaburzyć grę i możliwe jest
@@ -21,6 +21,9 @@ package homework.task9;
  * co sygnalizuje, że zostało poprawnie wykonane.
  * Po usunięciu obu wierszy oraz zmianie typu referencji w wierszu 28
  * program powinien działać poprawnie.
+ *
+ * Czy to jednak w pełni zabezpiecza przez opisanym problemem? Spróbuj napisać program, który
+ * umożliwi wstawienie na planszy znak trzeciego gracza.
  */
 public class Task09 {
     public static void main(String[] args) {
