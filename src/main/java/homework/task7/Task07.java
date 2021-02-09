@@ -6,7 +6,7 @@ package homework.task7;
  *    - Tomato
  *    - Cake
  *    - Salt
- *    Przy definicji wzoruj się na klasie Egg, może też samodzielnie dodać dodakowe pole, jak np. smak, czy koloryczność jednostkową podawaną w konstruktorze
+ *    Przy definicji wzoruj się na klasie Egg, możesz też samodzielnie dodać dodakowe pole, jak np. smak, czy koloryczność jednostkową podawaną w konstruktorze
  * 2. Zdefiniuj klasę Dish też implementującą interfejs Ingredient,
  *    - z polem w postaci tablicy obiektów implementujących Ingredient
  *    - z konstruktorem przyjmujący tablicę takich obiektów np. Dish(new Ingredients[]{chees, cake}), gdzie cheese i cake są obiektami klas Cheese i Cake
