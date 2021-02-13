@@ -19,16 +19,16 @@ public class EmailAddress {
     }
 
     /**
-     * Zaimplementuj metodę, która tworzy obiekt EmailAddress na podstawie loginu i hosta
+     * Zaimplementuj metodę, która tworzy obiekt EmailAddress na podstawie username i hosta
      * Jeśli nie można zbudowac poprawnego adresu np. gdy w login znajduje się znak '@' lub inny niż alfanumeryczny
      * to zgłosi jeden z dwóch wyjątków:
-     *          - IllegalLoginException, gdy login jest niepoprawnie zbudowany
+     *          - IllegalUsernameException, gdy username jest niepoprawnie zbudowany
      *          - IllegalHostException, gdy nazwa host nie niepoprawna
      * Jeśli oba argumenty są błędne to zgłaszamy pierwszy wyjątek
      * Obie klasy wyjątków należy samodzielnie zdefiniować
      */
 
-    public static EmailAddress of(String login, String host) {
+    public static EmailAddress of(String username, String host) {
 
         return null;
     }
@@ -58,7 +58,7 @@ public class EmailAddress {
         return !isNull(address)
                 && !isEmpty(address)
                 && hasOneAtSymbol(address)
-                && hasAtLeastOneDotAfterSymbol(address)
+                && hasAtLeastOneDotAfterAtSymbol(address)
                 && isValidUsername(extractUsername(address))
                 && isValidHost(extractHost(address));
     }
@@ -87,7 +87,7 @@ public class EmailAddress {
         return input.indexOf('@') == input.lastIndexOf('@') && input.indexOf('@') >= 0;
     }
 
-    static private boolean hasAtLeastOneDotAfterSymbol(String input){
+    static private boolean hasAtLeastOneDotAfterAtSymbol(String input){
         return input.indexOf('@') < input.lastIndexOf('.');
     }
 

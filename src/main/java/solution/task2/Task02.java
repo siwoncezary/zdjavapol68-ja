@@ -1,4 +1,4 @@
-package homework.task2;
+package solution.task2;
 
 /**
  * Zadanie 2 (łatwe)
@@ -16,7 +16,7 @@ package homework.task2;
  * Następnie zaimplementuj w klasach potomnych (SMS, Email) metody abstrakcyjne
  * send() tak, aby: <br>
  * - zwracały komunikat w postaci (odpowiednio dla klasy): "Mail/SMS o treści XXX został wysłany na adres/numer YYY",<br>
- *   gdzie XXX to treść, a YYY adres lub nednodpowimer telefonu
+ *   gdzie XXX to treść, a YYY adres lub numer telefonu
  * - jeśli wiadomości nie da się wysłać to zwraca komunikat: "Mail/SMS nie może zostać wysłany." <br>
  * Przyczynami niewysłania wiadomości mogą być niepoprawne: <br>
  * - adres mail: brak małpy, pusty łańcuch, null, niewystarczająca długość - co najmniej 5 znaków<br>
@@ -37,7 +37,7 @@ import java.util.regex.Pattern;
 
 /**
  * Wersja dla wymiataczy (trudne)
- * Składowe takie jak content, emailAddress, phoneNumber, subject mogą też mieć swoją klasę bazową abstrakcyjną np. MessageComponent, która może mieć metody abstarkcyjne:
+ * Składowe takie jak content, emailAddress, phoneNumber, subject mogą też mieć swoją klasę bazową abstrakcyjną np. MessageComponent, która może mieć metody abstrakcyjne:
  *  - boolean isValid() - zwraca, czy zawartość jest poprawna
  *  - String getError() - zwraca komunikat z infomacją dlaczego nie jest poprawne
  *  Zdefiniuj taką klasę abstrakcyjną i odpowiednie klas potomne: PhoneNumber, EmailAddress, EmailSubject, MessageContent

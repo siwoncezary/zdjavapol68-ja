@@ -13,7 +13,6 @@ public class GameBoard {
         this.markTwo = new PlayerMark(playerTwoName, "O");
     }
 
-
     /**
      * Metoda wstawia na planszy gry znacznik gracza
      * @param player
@@ -26,6 +25,16 @@ public class GameBoard {
 
     public PlayerMark[] getMarks() {
         return new PlayerMark[]{markOne, markTwo};
+    }
+
+    public void printPlayersMark(){
+        for(PlayerMark[] row: board){
+            for(PlayerMark cell: row){
+                if (cell != null)
+                System.out.print(cell.getName()+"\t\t");
+            }
+            System.out.println();
+        }
     }
 
     @Override

@@ -34,5 +34,8 @@ public class Task09 {
         PlayerMark newMark = new PlayerMark("","#"); //po wykonaniu zadania usuń ten wiersz
         board.markAt(newMark, 0,2);                   //po wykonaniu zadania usuń ten wiersz
         System.out.println(board);
+        GameBoard b = new GameBoard("Dominik", "Leszek");
+        board.markAt(b.getMarks()[0], 2,2);
+        board.printPlayersMark();
     }
 }

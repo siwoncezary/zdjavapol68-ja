@@ -11,11 +11,14 @@ public class Task11 {
         IntegerPair integerPair1 = new IntegerPair(10, 5);
         System.out.println(integerPair1.getFirst());
         System.out.println(integerPair1.getSecond());
-//        Pair<Integer, Integer> integerPair2 = new Pair<>(10,5);
+//        Pair<Integer, Integer> integerPair2 = new Pair<>(10, 5);
 //        System.out.println(integerPair2.getFirst());
 //        System.out.println(integerPair2.getSecond());
-//        Parable<Integer, Integer> integerPair3 = new Pair<>(10,5);
+//        Parable<Integer, Integer> integerPair3 = new Pair<>(10, 5);
 //        System.out.println(integerPair3.getFirst());
 //        System.out.println(integerPair3.getSecond());
+//        Pair<String, Character> pair4 = new Pair<>("TEST",'@');
+//        System.out.println(pair4.getFirst());
+//        System.out.println(pair4.getSecond());
     }
 }

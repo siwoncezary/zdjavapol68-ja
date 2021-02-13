@@ -5,6 +5,7 @@ abstract public class Animal {
     //metody abstrakcyjne
     public abstract void eat(double energy);
     public abstract void sleep(long time);
+
     //metoda zdefiniowana
     public boolean canEat(String food){
         for(String item: foods){
