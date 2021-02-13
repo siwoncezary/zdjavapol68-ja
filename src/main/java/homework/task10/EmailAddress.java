@@ -28,7 +28,7 @@ public class EmailAddress {
      * Obie klasy wyjątków należy samodzielnie zdefiniować
      */
 
-    public static EmailAddress of(String username, String host) {
+    public static EmailAddress of(String username, String host){
 
         return null;
     }

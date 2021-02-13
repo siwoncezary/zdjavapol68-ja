@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class EmailAddressTest {
 
     @Test
-    void of() {
+    void of() throws Exception{
         assertEquals("aa@op.pl", EmailAddress.of("aa@op.pl").get());
         assertEquals("aa.aa@op.pl", EmailAddress.of("aa.aa@op.pl").get());
         assertEquals("AA@ss.edu.pl", EmailAddress.of("AA@ss.edu.pl").get());
@@ -22,7 +22,7 @@ class EmailAddressTest {
     }
 
     @Test
-    void from() {
+    void from() throws Exception{
         assertEquals("aa@op.pl", EmailAddress.of("aa", "op.pl").get());
 
 //        assertThrows(IllegalUsernameException.class, () -> EmailAddress.of("", "@op.pl"));
@@ -40,22 +40,23 @@ class EmailAddressTest {
     }
 
     @Test
-    void get() {
+    void get() throws Exception
+    {
         assertEquals("aa@op.pl", EmailAddress.of("aa@op.pl").get());
     }
 
     @Test
-    void username() {
+    void username()throws Exception {
         assertEquals("aa", EmailAddress.of("aa@op.pl").username());
     }
 
     @Test
-    void host() {
+    void host() throws Exception {
         assertEquals("op.pl", EmailAddress.of("aa@op.pl").host());
     }
 
     @Test
-    void topDomain() {
+    void topDomain()throws Exception {
         assertEquals("pl", EmailAddress.of("aa@op.pl").topDomain());
     }
 }
