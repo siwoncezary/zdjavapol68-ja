@@ -15,7 +15,7 @@ package homework.task12;
  * Rozbuduj klasę Pizza, która jest daniem o ustalonej liście składników: Cake, Tomato, Cheese (zdefiniuj brakującą klasę), dodając:
  *   - kolejne metody dodające konkretne składniki: Tomato, Cheese, która zwracają true gdy dodano składnik
  *   - każda z metod dodaje składnik tylko raz, jeśli już jest dany składnik to nie dodaje go i zwraca false
- *   - zaimplementuj metodę isReady(), która zwróci tru,  gdy w kolekcji ingredients znajdują się wszystkie wymagane składniki:
+ *   - zaimplementuj metodę isReady(), która zwróci true, gdy w kolekcji ingredients znajdują się wszystkie wymagane składniki:
  *   Cake, Tomato, Cheese
  *
  * Częśc 3

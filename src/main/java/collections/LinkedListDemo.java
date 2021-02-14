@@ -1,9 +1,6 @@
 package collections;
 
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class LinkedListDemo {
     public static void main(String[] args) {
@@ -18,5 +15,27 @@ public class LinkedListDemo {
         System.out.println(names instanceof Iterable);
         System.out.println(names instanceof Collection);
         System.out.println(names instanceof List);
+        System.out.println(names);
+        System.out.println("Wykorzystanie ListIterator'a");
+        System.out.println("Usuwamy elementy 3 znakach");
+        System.out.println("Dodajemy za elementem na literę A napis OK");
+        ListIterator<String> iterator = names.listIterator();
+        while(iterator.hasNext()){
+            String item = iterator.next();
+            System.out.println("item: " + item);
+            if (item.length() == 3){
+                iterator.remove();
+            } else {
+                if (item.startsWith("A")){
+                    iterator.add("OK");
+                }
+            }
+        }
+        System.out.println(names);
+        System.out.println("Przeglądanie kolekcji od końca");
+        while(iterator.hasPrevious()){
+            String item = iterator.previous();
+            System.out.println("item[" + (iterator.previousIndex() + 1) +"]" + item);
+        }
     }
 }

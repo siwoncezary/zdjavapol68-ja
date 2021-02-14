@@ -1,5 +1,5 @@
 package anonymous;
-
+//Zamiast tablicy zastosuj kolekcję
 public class Menu {
     final MenuItem[] menuItems;
 
