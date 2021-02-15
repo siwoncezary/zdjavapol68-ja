@@ -1,6 +1,5 @@
 package homework.task13;
 
-import java.io.InputStream;
 import java.util.List;
 
 /**
@@ -34,10 +33,10 @@ import java.util.List;
  * CZESC DLA CHETNYCH
  * Zdefniuj klasę Paginator w postaci generycznej, aby działała dla dowolnej kolekcji obiektów
  */
-public class Task13 {
+public class Task13B {
 
     public static void main(String[] args) {
-        List<City> cities = Cities.loadCities(Task13.class.getResourceAsStream("../../cities500.txt"));
+        List<City> cities = Cities.loadCities(Task13B.class.getResourceAsStream("../../cities500.txt"));
         for(City c: cities){
             System.out.println(c);
         }

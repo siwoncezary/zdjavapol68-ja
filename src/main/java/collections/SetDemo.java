@@ -2,6 +2,7 @@ package collections;
 
 import java.util.Arrays;
 import java.util.HashSet;
+import java.util.Objects;
 import java.util.Set;
 
 public class SetDemo {
@@ -18,5 +19,6 @@ public class SetDemo {
         System.out.println("Dodanie elementu ADAM");
         System.out.println(names.add("ADAM"));
         System.out.println(names);
+        Objects.hashCode(names);
     }
 }

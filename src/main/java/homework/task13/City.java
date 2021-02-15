@@ -10,7 +10,7 @@ public class City implements Serializable {
     private final String name;
     private final float longitude;
     private final float latitude;
-    private final String code;
+    private final String countryCode;
     private final int population;
 
     public City(long id, String name, float longitude, float latitude, String code, int population) {
@@ -18,7 +18,7 @@ public class City implements Serializable {
         this.name = name;
         this.longitude = longitude;
         this.latitude = latitude;
-        this.code = code;
+        this.countryCode = code;
         this.population = population;
     }
 
@@ -38,8 +38,8 @@ public class City implements Serializable {
         return latitude;
     }
 
-    public String getCode() {
-        return code;
+    public String getCountryCode() {
+        return countryCode;
     }
 
     public int getPopulation() {
@@ -53,7 +53,7 @@ public class City implements Serializable {
                 ", name='" + name + '\'' +
                 ", longitude=" + longitude +
                 ", latitude=" + latitude +
-                ", code='" + code + '\'' +
+                ", code='" + countryCode + '\'' +
                 ", population=" + population +
                 '}';
     }
