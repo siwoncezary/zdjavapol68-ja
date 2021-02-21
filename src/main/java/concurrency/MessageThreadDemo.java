@@ -16,7 +16,7 @@ public class MessageThreadDemo {
                 thread.interrupt();
             }
             Thread.sleep(100);
-            if (thread.isInterrupted()){
+            if (!thread.isAlive()){
                 System.out.println("Wątek już się zakończył");
                 return;
             }
