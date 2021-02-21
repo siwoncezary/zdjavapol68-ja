@@ -8,8 +8,10 @@ public class MessageRunnableDemo {
         while(!thread0.isAlive()){  //ta pętla powoduje czekanie, aż wątek się uruchomi
         }
         thread1.start();        // wywwołanie asynchroniczne
-        Thread.sleep(5000);// wywołanie synchroniczne
-        thread0.interrupt();
-        thread1.interrupt();
+        //Thread.sleep(5000);// wywołanie synchroniczne
+        //thread0.interrupt();
+        //thread1.interrupt();
+        thread0.join();
+        thread1.join();
     }
 }
