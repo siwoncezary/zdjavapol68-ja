@@ -1,4 +1,4 @@
-package generics;
+package generics.length;
 
 abstract public class Length {
     final double length;
@@ -8,4 +8,11 @@ abstract public class Length {
     }
 
     abstract double getInMeter();
+
+    @Override
+    public String toString() {
+        return "Length{" +
+                "length=" + length +
+                '}';
+    }
 }
