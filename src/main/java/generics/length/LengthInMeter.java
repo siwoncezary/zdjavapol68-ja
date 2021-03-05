@@ -1,7 +1,13 @@
 package generics.length;
 
+/**
+ * Klasa długości wyrażonejw w metrach
+ */
 public class LengthInMeter extends Length {
-
+    /**
+     * Konstruktor długości w metrach
+     * @param length długośc
+     */
     public LengthInMeter(double length) {
         super(length);
     }
@@ -11,9 +17,6 @@ public class LengthInMeter extends Length {
         return length;
     }
 
-    public double getLength() {
-        return length;
-    }
 
     @Override
     public String toString() {

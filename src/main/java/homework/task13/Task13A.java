@@ -1,6 +1,10 @@
 package homework.task13;
 
-import java.util.Collection;
+import java.util.*;
+import java.util.function.DoubleFunction;
+import java.util.function.DoublePredicate;
+import java.util.stream.Collectors;
+
 /**
  * CZESC 1
  * Na podstawie otrzymanej kolekcji miast (obiekty klasy City) stwórz kolejne kolekcje (elementy z kolekcji kopiujemy do nowej):
@@ -26,6 +30,9 @@ import java.util.Collection;
  * Gwiazdkami oznaczony jest stopień trudności.
  */
 public class Task13A {
+    public static long sum(int a, int b){
+        return a + b;
+    }
     public static void main(String[] args) {
         Collection<City> cities = Cities.loadCities(Task13A.class.getResourceAsStream("../../cities500.txt"));
         for(City c: cities){
@@ -33,5 +40,25 @@ public class Task13A {
                 System.out.println(c);
             }
         }
+        List<City> polishCities = cities.stream()
+                .filter(city -> "PL".equals(city.getCountryCode()))
+                .collect(Collectors.toList());
+
+        long[] populationsOfLargeCities = cities.stream()
+                .filter(city -> city.getPopulation() > 5_000_000)
+                .mapToLong(City::getPopulation)
+                .toArray();
+        for(long c: populationsOfLargeCities){
+            System.out.println(c);
+        }
+        Optional<Map.Entry<String, Long>> countryWithMaxPopulation = cities.stream()
+                .collect(Collectors.groupingBy(City::getCountryCode, Collectors.summingLong(City::getPopulation)))
+                .entrySet()
+                .stream()
+                .max(Comparator.comparingLong(Map.Entry::getValue));
+        System.out.println(countryWithMaxPopulation);
+
+        DoublePredicate isGreater = x -> x > 10.0;
+        DoubleFunction<Double> fun = x -> x *10.0;
     }
 }
