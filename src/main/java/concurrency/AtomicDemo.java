@@ -23,5 +23,6 @@ public class AtomicDemo {
         service.execute(task);
         Thread.sleep(10);
         System.out.println(counter.get());
+        service.shutdown();
     }
 }

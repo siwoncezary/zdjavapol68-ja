@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Cities {
-    static List<City> loadCities(InputStream input) {
+    public static List<City> loadCities(InputStream input) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(input, Charset.forName("UTF-8")));
         return reader.lines().map(line -> {
             String[] current = line.split("\\t");
