@@ -18,7 +18,7 @@ class PersonComparatorByHeight implements Comparator<Person>{
 }
 
 
-class Person{
+class Person implements Comparable<Person>{
     final String name;
     final LocalDate birthDate;
     final int height;
@@ -53,6 +53,13 @@ class Person{
                 ", birthDate=" + birthDate +
                 ", height=" + height +
                 '}';
+    }
+
+    //Porządek obiektów wyznacza pole name, a jeśli są dwa obiekty o tym samym name to decyduje pole birthDate
+    @Override
+    public int compareTo(Person o) {
+        System.out.println("CompareTo call");
+        return name.compareTo(o.name) == 0 ? birthDate.compareTo(o.birthDate) : name.compareTo(o.name);
     }
 }
 

@@ -19,7 +19,9 @@ public class Menu {
         for(MenuItem item: menuItems){
             if (item.getNumber() == number){
                 item.process();
+                return;
             }
         }
+        System.out.println("Nie ma takiej opcji!");
     }
 }
