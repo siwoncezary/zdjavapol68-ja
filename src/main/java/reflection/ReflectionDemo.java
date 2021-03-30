@@ -10,6 +10,8 @@ class ReflectionItem{
     private final int point;
 
     public ReflectionItem() {
+        //zabezpieczenie klasy przed refleksją
+        System.setSecurityManager(new SecurityManager());
         name = "test";
         point = 10;
     }
